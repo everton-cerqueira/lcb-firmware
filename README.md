@@ -14,7 +14,7 @@ The code was compartmentalized with classes to make adding new features easier.
 ## Building and running
 
 1. Connect a USB cable between the USB port on the board and the host computer.
-1. Run the following command to build the example project and program the microcontroller flash memory:
+1. Load and build the example project and program the microcontroller flash memory.
 
 ## Expected output
 The LED on your target turns on and off every 1 second.
