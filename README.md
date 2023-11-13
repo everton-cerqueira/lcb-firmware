@@ -3,50 +3,21 @@ This example shows a sketch of a load cell board firmware responsible for acquir
 
 ## Mbed OS build tools
 
-### Mbed CLI 2
-Starting with version 6.5, Mbed OS uses Mbed CLI 2. It uses Ninja as a build system, and CMake to generate the build environment and manage the build process in a compiler-independent manner. If you are working with Mbed OS version prior to 6.5 then check the section [Mbed CLI 1](#mbed-cli-1).
-1. [Install Mbed CLI 2](https://os.mbed.com/docs/mbed-os/latest/build-tools/install-or-upgrade.html).
-1. From the command-line, import the example: `mbed-tools import mbed-os-example-blinky`
-1. Change the current directory to where the project was imported.
+This example was built using Mbed Studio [https://os.mbed.com/studio/] plus NUCLEO-L476RG board [https://www.st.com/en/evaluation-tools/nucleo-l476rg.html]
 
-### Mbed CLI 1
-1. [Install Mbed CLI 1](https://os.mbed.com/docs/mbed-os/latest/quick-start/offline-with-mbed-cli.html).
-1. From the command-line, import the example: `mbed import mbed-os-example-blinky`
-1. Change the current directory to where the project was imported.
+After downloading the Mbed Studio, create a new program using this repository.
 
 ## Application functionality
 
-The `main()` function is the single thread in the application. It toggles the state of a digital output connected to an LED on the board.
-
-**Note**: This example requires a target with RTOS support, i.e. one with `rtos` declared in `supported_application_profiles` in `targets/targets.json` in [mbed-os](https://github.com/ARMmbed/mbed-os). For non-RTOS targets (usually with small memory sizes), please use [mbed-os-example-blinky-baremetal](https://github.com/ARMmbed/mbed-os-example-blinky-baremetal) instead.
+The code was compartmentalized with classes to make adding new features easier.
 
 ## Building and running
 
 1. Connect a USB cable between the USB port on the board and the host computer.
 1. Run the following command to build the example project and program the microcontroller flash memory:
 
-    * Mbed CLI 2
-
-    ```bash
-    $ mbed-tools compile -m <TARGET> -t <TOOLCHAIN> --flash
-    ```
-
-    * Mbed CLI 1
-
-    ```bash
-    $ mbed compile -m <TARGET> -t <TOOLCHAIN> --flash
-    ```
-
-Your PC may take a few minutes to compile your code.
-
-The binary is located at:
-* **Mbed CLI 2** - `./cmake_build/<TARGET>/develop/<TOOLCHAIN>/mbed-os-example-blinky.bin`
-* **Mbed CLI 1** - `./BUILD/<TARGET>/<TOOLCHAIN>/mbed-os-example-blinky.bin`
-
-Alternatively, you can manually copy the binary to the board, which you mount on the host computer over USB.
-
 ## Expected output
-The LED on your target turns on and off every 500 milliseconds.
+The LED on your target turns on and off every 1 second.
 
 
 ## Troubleshooting
