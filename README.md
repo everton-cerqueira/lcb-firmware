@@ -1,5 +1,5 @@
 # Load Cell Board Mbed OS example using process class
-This example shows a sketch of a load cell board responsible for acquiring analog data and sending it to a CAN interface.
+This example shows a sketch of a load cell board firmware responsible for acquiring analog data and sending it to a CAN interface.
 
 ## Mbed OS build tools
 
